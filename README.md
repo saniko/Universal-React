@@ -32,6 +32,8 @@ In general, benefits for engineering, reusability, performance and SEO
 5. Pull the state out of store.
 6. Pass the state along to the client (dehydration - extract the current state of an app and serialize it into an object * ).
 7. Package & send the HTML to the client
+8. On the client side, a new Redux store will be created and initialized with the state provided from the server.
+    Redux's only job on the server side is to provide the initial state of our app.
 
 Check server.js for detailed comments.
 
