@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Universal-react by saniko</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Universal-react</h1>
+      <h2 class="project-tagline">React Universal Explained - Educational Purposes</h2>
+      <a href="https://github.com/saniko/Universal-React" class="btn">View on GitHub</a>
+      <a href="https://github.com/saniko/Universal-React/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/saniko/Universal-React/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="universal-react" class="anchor" href="#universal-react" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Universal-React</h1>
+
+<p>React Universal Explained - Educational Purposes</p>
+
+<h1>
+<a id="universal-app---main-players-on-server-side" class="anchor" href="#universal-app---main-players-on-server-side" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Universal app - main players on server side:</h1>
+
+<ol>
+<li>react</li>
+<li>react-router - <a href="https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md">https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md</a>
+
+<ol>
+<li>match to match the routes to a location without rendering</li>
+<li>RouterContext for synchronous rendering of route components</li>
+</ol>
+</li>
+<li>react-redux - <a href="http://redux.js.org/docs/recipes/ServerRendering.html">http://redux.js.org/docs/recipes/ServerRendering.html</a>
+</li>
+</ol>
+
+<h1>
+<a id="universal-app---why" class="anchor" href="#universal-app---why" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Universal app - Why?</h1>
+
+<p><strong>In general, benefits for engineering, reusability, performance and SEO</strong></p>
+
+<ol>
+<li>SEO</li>
+<li>Performance (initial load time)</li>
+<li>Cross device support</li>
+<li>Same code base (sharing of logic)</li>
+<li>Catching current trends ;)</li>
+<li>Non js users (?)</li>
+</ol>
+
+<h1>
+<a id="universal-app---how" class="anchor" href="#universal-app---how" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Universal app - How?</h1>
+
+<ol>
+<li>Handle the initial render when a user (or search engine crawler) first requests our app. When the server receives the request, it        renders the required component(s) into an HTML string, and then sends it as a response to the client. From that point on, the client     takes over rendering duties.</li>
+<li>Send the state of our app along in our response, so the client can use it as the initial state. if we preload any data before            generating the HTML, we want the client to also have access to this data. Otherwise, the markup generated on the client won’t match      the server markup, and the client would have to load the data again.</li>
+<li>Create a fresh, new Redux store instance on every request.On the client side, a new Redux store will be created and initialized with     the state provided from the server.</li>
+<li>Optionally dispatch some actions.</li>
+<li>Pull the state out of store.</li>
+<li>Pass the state along to the client (dehydration - extract the current state of an app and serialize it into an object * ).</li>
+<li>Package &amp; send the HTML to the client</li>
+</ol>
+
+<p>Check server.js for detailed comments.</p>
+
+<h1>
+<a id="links" class="anchor" href="#links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Links:</h1>
+
+<h1>
+<a id="" class="anchor" href="#" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>*</h1>
+
+<p>Say I want to pre-render my app on the server, serve the html to the client, then re-render my app on the client. This would be trivial if my app only consisted of static data. However, my app is stateful: it retrieves data from my API before the initial render and stores it. By extracting the state of my app on the server, sending it along with the HTML, then reinjecting it on the client, I avoid making two requests to my API.
+for more see: <a href="http://stackoverflow.com/questions/29824908/what-does-dehydrate-and-rehydrate-stand-for-in-fluxible">http://stackoverflow.com/questions/29824908/what-does-dehydrate-and-rehydrate-stand-for-in-fluxible</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/saniko/Universal-React">Universal-react</a> is maintained by <a href="https://github.com/saniko">saniko</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
