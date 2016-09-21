@@ -1,5 +1,6 @@
 # Universal-React
-React Universal Explained - Educational Purposes
+React Universal Explained - Educational Purposes,
+Will evolve with time to full universal react app
 
 # Universal app - main players on server side:
 
