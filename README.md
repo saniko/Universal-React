@@ -10,6 +10,7 @@ Will evolve with time to full universal react app
     2. RouterContext - for synchronous rendering of route components.
     3. createMemoryHistory - This is useful for when you need to customize the history object used for server-side rendering.
 3. react-redux - http://redux.js.org/docs/recipes/ServerRendering.html
+    1. very short redux explanation: http://slides.com/jenyaterpil/redux-from-twitter-hype-to-production#/9
 
 # Universal app - Why?
 
