@@ -5,8 +5,9 @@ React Universal Explained - Educational Purposes
 
 1. react
 2. react-router - https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md
-    1. match to match the routes to a location without rendering
-    2. RouterContext for synchronous rendering of route components
+    1. match - to match the routes to a location without rendering.
+    2. RouterContext - for synchronous rendering of route components.
+    3. createMemoryHistory - This is useful for when you need to customize the history object used for server-side rendering.
 3. react-redux - http://redux.js.org/docs/recipes/ServerRendering.html
 
 # Universal app - Why?
