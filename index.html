@@ -39,6 +39,12 @@ Will evolve with time to full universal react app</p>
 </ol>
 </li>
 <li>react-redux - <a href="http://redux.js.org/docs/recipes/ServerRendering.html">http://redux.js.org/docs/recipes/ServerRendering.html</a>
+
+<ol>
+<li>very short redux explanation: <a href="http://slides.com/jenyaterpil/redux-from-twitter-hype-to-production#/9">http://slides.com/jenyaterpil/redux-from-twitter-hype-to-production#/9</a>
+</li>
+<li>TL;DR - Redux: Redux at its most minimal is the store, actions, and reducers. Connecting React to Redux involves wrapping your     entire app in theProvider component, and then connecting components, usingmapStateToProps and mapDispatchToProps as appropriate.</li>
+</ol>
 </li>
 </ol>
 
@@ -67,6 +73,8 @@ Will evolve with time to full universal react app</p>
 <li>Pull the state out of store.</li>
 <li>Pass the state along to the client (dehydration - extract the current state of an app and serialize it into an object * ).</li>
 <li>Package &amp; send the HTML to the client</li>
+<li>On the client side, a new Redux store will be created and initialized with the state provided from the server.
+Redux's only job on the server side is to provide the initial state of our app.</li>
 </ol>
 
 <p>Check server.js for detailed comments.</p>
