@@ -12,6 +12,7 @@ Will evolve with time to full universal react app
 3. react-redux - http://redux.js.org/docs/recipes/ServerRendering.html
     1. very short redux explanation: http://slides.com/jenyaterpil/redux-from-twitter-hype-to-production#/9
     2. TL;DR - Redux: Redux at its most minimal is the store, actions, and reducers. Connecting React to Redux involves wrapping your     entire app in theProvider component, and then connecting components, usingmapStateToProps and mapDispatchToProps as appropriate.
+    3. check this out: https://tech.affirm.com/redux-patterns-and-anti-patterns-7d80ef3d53bc#.rznvukc9g
 
 # Universal app - Why?
 
