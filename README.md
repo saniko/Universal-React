@@ -7,7 +7,7 @@ Will evolve with time to full universal react app
 1. react
 2. react-router - https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md
     1. match - to match the routes to a location without rendering.
-    2. RouterContext - for synchronous rendering of route components.
+    2. RouterContext - for synchronous rendering of route components, Once we have a match RouterContext will render the component tree for the given router state and return the component markup as a string with the help of renderToString method.
     3. createRoutes - to create a set of routes from our router.js file component and provide it to match.
     4. createMemoryHistory - This is useful for when you need to customize the history object used for server-side rendering.
 3. react-redux - http://redux.js.org/docs/recipes/ServerRendering.html
