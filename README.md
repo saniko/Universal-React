@@ -8,7 +8,8 @@ Will evolve with time to full universal react app
 2. react-router - https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md
     1. match - to match the routes to a location without rendering.
     2. RouterContext - for synchronous rendering of route components.
-    3. createMemoryHistory - This is useful for when you need to customize the history object used for server-side rendering.
+    3. createRoutes - to create a set of routes from our router.js file component and provide it to match.
+    4. createMemoryHistory - This is useful for when you need to customize the history object used for server-side rendering.
 3. react-redux - http://redux.js.org/docs/recipes/ServerRendering.html
     1. very short redux explanation: http://slides.com/jenyaterpil/redux-from-twitter-hype-to-production#/9
     2. TL;DR - Redux: Redux at its most minimal is the store, actions, and reducers. Connecting React to Redux involves wrapping your     entire app in theProvider component, and then connecting components, usingmapStateToProps and mapDispatchToProps as appropriate.
