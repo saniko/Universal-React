@@ -48,5 +48,11 @@ Check server.js for detailed comments.
 # *
 Say I want to pre-render my app on the server, serve the html to the client, then re-render my app on the client. This would be trivial if my app only consisted of static data. However, my app is stateful: it retrieves data from my API before the initial render and stores it. By extracting the state of my app on the server, sending it along with the HTML, then reinjecting it on the client, I avoid making two requests to my API.
 for more see: http://stackoverflow.com/questions/29824908/what-does-dehydrate-and-rehydrate-stand-for-in-fluxible
+<br>
+<br>
+# Some usfeul links
+
+http://crypt.codemancers.com/posts/2016-09-16-react-server-side-rendering/
+
 
 
