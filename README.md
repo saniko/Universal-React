@@ -52,7 +52,9 @@ for more see: http://stackoverflow.com/questions/29824908/what-does-dehydrate-an
 <br>
 # Some usfeul links
 
-http://crypt.codemancers.com/posts/2016-09-16-react-server-side-rendering/
+http://crypt.codemancers.com/posts/2016-09-16-react-server-side-rendering/<br>
+https://medium.com/@foxhound87/server-side-rendering-with-react-router-we-must-react-ep-04-ad03b6b9e05d#.tjpc0sacq<br>
+https://medium.com/@foxhound87/state-management-hydration-with-mobx-we-must-react-ep-05-1922a72453c6#.kd04w71a9
 
 
 
