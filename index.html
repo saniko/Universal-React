@@ -34,7 +34,8 @@ Will evolve with time to full universal react app</p>
 
 <ol>
 <li>match - to match the routes to a location without rendering.</li>
-<li>RouterContext - for synchronous rendering of route components.</li>
+<li>RouterContext - for synchronous rendering of route components, Once we have a match RouterContext will render the component tree for the given router state and return the component markup as a string with the help of renderToString method.</li>
+<li>createRoutes - to create a set of routes from our router.js file component and provide it to match.</li>
 <li>createMemoryHistory - This is useful for when you need to customize the history object used for server-side rendering.</li>
 </ol>
 </li>
@@ -44,6 +45,8 @@ Will evolve with time to full universal react app</p>
 <li>very short redux explanation: <a href="http://slides.com/jenyaterpil/redux-from-twitter-hype-to-production#/9">http://slides.com/jenyaterpil/redux-from-twitter-hype-to-production#/9</a>
 </li>
 <li>TL;DR - Redux: Redux at its most minimal is the store, actions, and reducers. Connecting React to Redux involves wrapping your     entire app in theProvider component, and then connecting components, usingmapStateToProps and mapDispatchToProps as appropriate.</li>
+<li>check this out: <a href="https://tech.affirm.com/redux-patterns-and-anti-patterns-7d80ef3d53bc#.rznvukc9g">https://tech.affirm.com/redux-patterns-and-anti-patterns-7d80ef3d53bc#.rznvukc9g</a>
+</li>
 </ol>
 </li>
 </ol>
@@ -86,7 +89,14 @@ Redux's only job on the server side is to provide the initial state of our app.<
 <a id="" class="anchor" href="#" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>*</h1>
 
 <p>Say I want to pre-render my app on the server, serve the html to the client, then re-render my app on the client. This would be trivial if my app only consisted of static data. However, my app is stateful: it retrieves data from my API before the initial render and stores it. By extracting the state of my app on the server, sending it along with the HTML, then reinjecting it on the client, I avoid making two requests to my API.
-for more see: <a href="http://stackoverflow.com/questions/29824908/what-does-dehydrate-and-rehydrate-stand-for-in-fluxible">http://stackoverflow.com/questions/29824908/what-does-dehydrate-and-rehydrate-stand-for-in-fluxible</a></p>
+for more see: <a href="http://stackoverflow.com/questions/29824908/what-does-dehydrate-and-rehydrate-stand-for-in-fluxible">http://stackoverflow.com/questions/29824908/what-does-dehydrate-and-rehydrate-stand-for-in-fluxible</a>
+<br>
+<br></p>
+
+<h1>
+<a id="some-usfeul-links" class="anchor" href="#some-usfeul-links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Some usfeul links</h1>
+
+<p><a href="http://crypt.codemancers.com/posts/2016-09-16-react-server-side-rendering/">http://crypt.codemancers.com/posts/2016-09-16-react-server-side-rendering/</a></p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/saniko/Universal-React">Universal-React</a> is maintained by <a href="https://github.com/saniko">saniko</a>.</span>
