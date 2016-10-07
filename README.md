@@ -58,7 +58,8 @@ https://medium.com/@foxhound87/server-side-rendering-with-react-router-we-must-r
 https://medium.com/@foxhound87/state-management-hydration-with-mobx-we-must-react-ep-05-1922a72453c6#.kd04w71a9
 
 
-
+# Forward work
+1. What about social login - https://hashnode.com/post/how-to-implement-social-login-in-a-universal-react-app-cityl0c1901zy8t535xj7ox24
 
 
 
