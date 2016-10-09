@@ -15,6 +15,7 @@ Part of Dani Koren's personal <a href="https://saniko.github.io/danikoren/">blog
     1. very short redux explanation: http://slides.com/jenyaterpil/redux-from-twitter-hype-to-production#/9
     2. TL;DR - Redux: Redux at its most minimal is the store, actions, and reducers. Connecting React to Redux involves wrapping your     entire app in theProvider component, and then connecting components, usingmapStateToProps and mapDispatchToProps as appropriate.
     3. check this out: https://tech.affirm.com/redux-patterns-and-anti-patterns-7d80ef3d53bc#.rznvukc9g
+    4. good read about <a href="https://medium.com/javascript-scene/10-tips-for-better-redux-architecture-69250425af44#.c16bnn710">redux</a>
 
 # Universal app - Why?
 
