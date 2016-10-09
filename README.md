@@ -47,6 +47,8 @@ One downside of SSR is a huge performance hit on <b>complex components</b><br>
 One can try and mitigate this by implementing <a href="https://medium.com/walmartlabs/reactjs-ssr-profiling-and-caching-5d8e9e49240c#.ucelx81s6">cache techniques</a> and <a href="https://www.youtube.com/watch?v=sn-C_DKLKPE">Component Memoization techniques</a><br>
 <br>Consider this: <a href="http://www.electrode.io/docs/server_side_render_cache.html">Server Side Render Caching + Profiling</a>
 <br> check <a href="https://github.com/walmartlabs/react-ssr-optimization">this</a>
+<br> check <a href="https://github.com/docs-code-examples-electrode-io/express-react-redux-webpack">this</a>
+
 
 # General:
 
