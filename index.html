@@ -101,7 +101,8 @@ Redux's only job on the server side is to provide the initial state of our app.<
 <h1>
 <a id="universal-app---problems" class="anchor" href="#universal-app---problems" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Universal app - Problems?</h1>
 
-<p>One downside of SSR is a huge performance hit on <b>complex components</b><br></p>
+<p>One downside of SSR is a huge performance hit on <b>complex components</b><br>
+renderToString() is synchronous, the server is blocked while it runs! <br></p>
 
 <p>One can try and mitigate this by implementing <a href="https://medium.com/walmartlabs/reactjs-ssr-profiling-and-caching-5d8e9e49240c#.ucelx81s6">cache techniques</a> and <a href="https://www.youtube.com/watch?v=sn-C_DKLKPE">Component Memoization techniques</a><br>
 <br>Consider this: <a href="http://www.electrode.io/docs/server_side_render_cache.html">Server Side Render Caching + Profiling</a>
@@ -127,7 +128,7 @@ for more see: <a href="http://stackoverflow.com/questions/29824908/what-does-deh
 <a href="https://medium.com/@foxhound87/state-management-hydration-with-mobx-we-must-react-ep-05-1922a72453c6#.kd04w71a9">https://medium.com/@foxhound87/state-management-hydration-with-mobx-we-must-react-ep-05-1922a72453c6#.kd04w71a9</a></p>
 
 <h1>
-<a id="forward-work" class="anchor" href="#forward-work" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Forward work</h1>
+<a id="going-forward" class="anchor" href="#going-forward" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Going Forward</h1>
 
 <ol>
 <li>What about social login - <a href="https://hashnode.com/post/how-to-implement-social-login-in-a-universal-react-app-cityl0c1901zy8t535xj7ox24">https://hashnode.com/post/how-to-implement-social-login-in-a-universal-react-app-cityl0c1901zy8t535xj7ox24</a>
