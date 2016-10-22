@@ -51,6 +51,7 @@ Check server.js for detailed comments.
 
 # Universal app - Problems?
 One downside of SSR is a huge performance hit on <b>complex components</b><br>
+renderToString() is synchronous, the server is blocked while it runs! <br>
 
 One can try and mitigate this by implementing <a href="https://medium.com/walmartlabs/reactjs-ssr-profiling-and-caching-5d8e9e49240c#.ucelx81s6">cache techniques</a> and <a href="https://www.youtube.com/watch?v=sn-C_DKLKPE">Component Memoization techniques</a><br>
 <br>Consider this: <a href="http://www.electrode.io/docs/server_side_render_cache.html">Server Side Render Caching + Profiling</a>
@@ -72,7 +73,7 @@ https://medium.com/@foxhound87/server-side-rendering-with-react-router-we-must-r
 https://medium.com/@foxhound87/state-management-hydration-with-mobx-we-must-react-ep-05-1922a72453c6#.kd04w71a9
 
 
-# Forward work
+# Going Forward 
 1. What about social login - https://hashnode.com/post/how-to-implement-social-login-in-a-universal-react-app-cityl0c1901zy8t535xj7ox24
 
 
