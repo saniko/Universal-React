@@ -19,7 +19,8 @@ Part of Dani Koren's personal <a href="https://saniko.github.io/danikoren/">blog
     3. createRoutes - to create a set of routes from our router.js file component and provide it to match.
     4. createMemoryHistory - This is useful for when you need to customize the history object used for server-side rendering.
 3. react-redux - http://redux.js.org/docs/recipes/ServerRendering.html
-    1. very short redux explanation: http://slides.com/jenyaterpil/redux-from-twitter-hype-to-production#/9
+    1. very short redux diagram explanation: http://slides.com/jenyaterpil/redux-from-twitter-hype-to-production#/9, 
+       on with side effects http://slides.com/jenyaterpil/redux-from-twitter-hype-to-production#/23.
     2. TL;DR - Redux: Redux at its most minimal is the store, actions, and reducers. Connecting React to Redux involves wrapping your     entire app in theProvider component, and then connecting components, usingmapStateToProps and mapDispatchToProps as appropriate.
     3. check this out: https://tech.affirm.com/redux-patterns-and-anti-patterns-7d80ef3d53bc#.rznvukc9g
     4. good read about <a href="https://medium.com/javascript-scene/10-tips-for-better-redux-architecture-69250425af44#.c16bnn710">redux</a>
@@ -36,7 +37,19 @@ Part of Dani Koren's personal <a href="https://saniko.github.io/danikoren/">blog
 In general, benefits for engineering, reusability, performance and SEO
 
 # Universal app - How?
+## Redux
+From redux docs:<br>
+To send the data down to the client, we need to:
 
+create a fresh, new Redux store instance on every request;
+optionally dispatch some actions;
+pull the state out of store;
+and then pass the state along to the client.
+On the client side, a new Redux store will be created and initialized with the state provided from the server.
+Redux's only job on the server side is to provide the initial state of our app.
+<br><br>
+
+## SO to recap ssr
 1. Handle the initial render when a user (or search engine crawler) first requests our app. When the server receives the request, it        renders the required component(s) into an HTML string, and then sends it as a response to the client. From that point on, the client     takes over rendering duties.
 2. Send the state of our app along in our response, so the client can use it as the initial state. if we preload any data before            generating the HTML, we want the client to also have access to this data. Otherwise, the markup generated on the client won’t match      the server markup, and the client would have to load the data again.
 3. Create a fresh, new Redux store instance on every request.On the client side, a new Redux store will be created and initialized with     the state provided from the server.
