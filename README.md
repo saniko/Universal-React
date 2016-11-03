@@ -12,7 +12,7 @@ Part of Dani Koren's personal <a href="https://saniko.github.io/danikoren/">blog
 
 # Universal app - main players on server side:
 
-1. react
+1. react - using React.renderToString, enables us to render components on the server side, the component is only rendered, but not    mounted, so any methods related to mounting are not called.
 2. react-router - https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md
     1. match - to match the routes to a location without rendering.
     2. RouterContext - for synchronous rendering of route components, Once we have a match RouterContext will render the component tree for the given router state and return the component markup as a string with the help of renderToString method.
