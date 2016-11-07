@@ -9,6 +9,8 @@ Part of Dani Koren's personal <a href="https://saniko.github.io/danikoren/">blog
 2. To understand the concept of reactive programming click <a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754">here</a>.<br>
 3. For React code samples click <a href="https://github.com/rdig/react-code-samples">here</a>.<br>
 
+# So what is it?
+React has baked-in support for server rendering components using ReactDOMServer.renderToString(). Given a component, it will generate the HTML markup to be shipped down to the browser. React can take this markup and using ReactDOM.render() hydrate it, attach events, make it interactive and provide a fast first paint on first load.<br><br>
 
 # Universal app - main players on server side:
 
@@ -37,6 +39,10 @@ Part of Dani Koren's personal <a href="https://saniko.github.io/danikoren/">blog
 In general, benefits for engineering, reusability, performance and SEO
 
 # Universal app - How?
+
+## React-Router
+https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md
+
 ## Redux
 From redux docs:<br>
 To send the data down to the client, we need to:
