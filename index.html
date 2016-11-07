@@ -40,6 +40,11 @@ Part of Dani Koren's personal <a href="https://saniko.github.io/danikoren/">blog
 </ol>
 
 <h1>
+<a id="so-what-is-it" class="anchor" href="#so-what-is-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>So what is it?</h1>
+
+<p>React has baked-in support for server rendering components using ReactDOMServer.renderToString(). Given a component, it will generate the HTML markup to be shipped down to the browser. React can take this markup and using ReactDOM.render() hydrate it, attach events, make it interactive and provide a fast first paint on first load.<br><br></p>
+
+<h1>
 <a id="universal-app---main-players-on-server-side" class="anchor" href="#universal-app---main-players-on-server-side" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Universal app - main players on server side:</h1>
 
 <ol>
@@ -83,6 +88,16 @@ on with side effects <a href="http://slides.com/jenyaterpil/redux-from-twitter-h
 
 <h1>
 <a id="universal-app---how" class="anchor" href="#universal-app---how" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Universal app - How?</h1>
+
+<h2>
+<a id="react-router" class="anchor" href="#react-router" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>React-Router</h2>
+
+<p>We need to have the ability to render routes on the server<br>
+As opposed to the client, we need to handle 30x responses for redirects and fetching data before rendering.
+For this, we use the Router low-level API methods, match for matching routes to a location without rendering and RouterContext for sync rendering of route components.<br><br>
+for additional info:<br>
+<a href="https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md">https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md</a>
+<br></p>
 
 <h2>
 <a id="redux" class="anchor" href="#redux" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Redux</h2>
@@ -142,7 +157,8 @@ for more see: <a href="http://stackoverflow.com/questions/29824908/what-does-deh
 
 <p><a href="http://crypt.codemancers.com/posts/2016-09-16-react-server-side-rendering/">http://crypt.codemancers.com/posts/2016-09-16-react-server-side-rendering/</a><br>
 <a href="https://medium.com/@foxhound87/server-side-rendering-with-react-router-we-must-react-ep-04-ad03b6b9e05d#.tjpc0sacq">https://medium.com/@foxhound87/server-side-rendering-with-react-router-we-must-react-ep-04-ad03b6b9e05d#.tjpc0sacq</a><br>
-<a href="https://medium.com/@foxhound87/state-management-hydration-with-mobx-we-must-react-ep-05-1922a72453c6#.kd04w71a9">https://medium.com/@foxhound87/state-management-hydration-with-mobx-we-must-react-ep-05-1922a72453c6#.kd04w71a9</a></p>
+<a href="https://medium.com/@foxhound87/state-management-hydration-with-mobx-we-must-react-ep-05-1922a72453c6#.kd04w71a9">https://medium.com/@foxhound87/state-management-hydration-with-mobx-we-must-react-ep-05-1922a72453c6#.kd04w71a9</a>
+<a href="https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-4-site-is-progressively-enhanced-b5ad7cf7a447#.qlf149uz3">https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-4-site-is-progressively-enhanced-b5ad7cf7a447#.qlf149uz3</a></p>
 
 <h1>
 <a id="going-forward" class="anchor" href="#going-forward" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Going Forward</h1>
