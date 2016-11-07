@@ -41,8 +41,12 @@ In general, benefits for engineering, reusability, performance and SEO
 # Universal app - How?
 
 ## React-Router
+We need to have the ability to render routes on the server<br>
+As opposed to the client, we need to handle 30x responses for redirects and fetching data before rendering.
+For this, we use the Router low-level API methods, match for matching routes to a location without rendering and RouterContext for sync rendering of route components.<br><br>
+for additional info:<br>
 https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md
-
+<br>
 ## Redux
 From redux docs:<br>
 To send the data down to the client, we need to:
