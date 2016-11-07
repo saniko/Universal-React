@@ -71,7 +71,6 @@ One can try and mitigate this by implementing <a href="https://medium.com/walmar
 <br> check <a href="https://github.com/walmartlabs/react-ssr-optimization">this</a>
 <br> check <a href="https://github.com/docs-code-examples-electrode-io/express-react-redux-webpack">this</a>
 
-
 # General:
 
 # *
@@ -84,7 +83,7 @@ for more see: http://stackoverflow.com/questions/29824908/what-does-dehydrate-an
 http://crypt.codemancers.com/posts/2016-09-16-react-server-side-rendering/<br>
 https://medium.com/@foxhound87/server-side-rendering-with-react-router-we-must-react-ep-04-ad03b6b9e05d#.tjpc0sacq<br>
 https://medium.com/@foxhound87/state-management-hydration-with-mobx-we-must-react-ep-05-1922a72453c6#.kd04w71a9
-
+https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-4-site-is-progressively-enhanced-b5ad7cf7a447#.qlf149uz3
 
 # Going Forward 
 1. What about social login - https://hashnode.com/post/how-to-implement-social-login-in-a-universal-react-app-cityl0c1901zy8t535xj7ox24
