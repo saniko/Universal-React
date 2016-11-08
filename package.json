@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/saniko/Universal-React/issues"
   },
-  "homepage": "https://github.com/saniko/Universal-React#readme"
+  "homepage": "https://github.com/saniko/Universal-React#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  }
 }
