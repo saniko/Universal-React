@@ -1,0 +1,25 @@
+{
+  "name": "universal-react",
+  "version": "1.0.0",
+  "description": "**** Work In Progress *** <br><br> React Universal Explained - Educational Purposes, Will evolve with time to full universal react app<br> Part of Dani Koren's personal <a href=\"https://saniko.github.io/danikoren/\">blog.</a>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saniko/Universal-React.git"
+  },
+  "keywords": [
+    "react",
+    "universal",
+    "react-router",
+    "ssr"
+  ],
+  "author": "dani koren",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saniko/Universal-React/issues"
+  },
+  "homepage": "https://github.com/saniko/Universal-React#readme"
+}
