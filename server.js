@@ -14,8 +14,11 @@ var app = express();
 app.use(express.static('public'));
 
 app.get('/', function(req, res){
+
+  var props = { title: 'pp' };
+
   var html = ReactDomServer.renderToString(
-    React.createElement(Component)
+    React.createElement(Component, props)
   )
   res.send(html);
 });

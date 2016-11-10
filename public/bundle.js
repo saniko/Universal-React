@@ -48,8 +48,10 @@
 	var ReactDOM = __webpack_require__(34);
 	var Component = __webpack_require__(172)
 
+	var props = window.PROPS;
+
 	ReactDOM.render(
-	    React.createElement(Component), document
+	    React.createElement(Component, props), document
 	);
 
 
@@ -21455,20 +21457,27 @@
 	        'body',
 	        null,
 	        React.createElement(
-	          'h1',
+	          'div',
 	          null,
-	          'test'
+	          React.createElement(
+	            'h1',
+	            null,
+	            this.props.title
+	          ),
+	          React.createElement(
+	            'p',
+	            null,
+	            'Isn\'t server-side rendering remarkable?'
+	          ),
+	          React.createElement(
+	            'button',
+	            { onClick: this.onClick },
+	            'Click Me'
+	          )
 	        ),
-	        React.createElement(
-	          'p',
-	          null,
-	          'Isn\'t server-side rendering remarkable?'
-	        ),
-	        React.createElement(
-	          'button',
-	          { onClick: this.onClick },
-	          'Click Me'
-	        ),
+	        React.createElement('script', { dangerouslySetInnerHTML: {
+	            __html: 'window.PROPS=' + JSON.stringify(this.props)
+	          } }),
 	        React.createElement('script', { src: '/bundle.js' })
 	      )
 	    );

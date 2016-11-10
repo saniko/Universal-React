@@ -18,9 +18,15 @@ module.exports = React.createClass({
                    <link rel='stylesheet' href='/style.css' />
                </head>
                <body>
-                   <h1>test</h1>
+                 <div>
+                   <h1>{this.props.title}</h1>
                    <p>Isn't server-side rendering remarkable?</p>
                    <button onClick={this.onClick}>Click Me</button>
+                 </div>
+                     <script dangerouslySetInnerHTML={{
+                         __html: 'window.PROPS=' + JSON.stringify(this.props)
+                     }} />
+
                      <script src='/bundle.js' />
               </body>
 
