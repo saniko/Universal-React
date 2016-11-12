@@ -10,13 +10,7 @@ router.get('*', function(req, res){
   var props = { title: 'pp' };
 
   ReactRouter.match({
-    routes:(
-      <ReactRouter.Router>
-        <ReactRouter.Router path='/' component={ Component } >
-
-        </ReactRouter.Router>
-      </ReactRouter.Router>
-    ),
+    routes: require('./routes.jsx'),
     location: req.url
 
   }, function(error, redirectLocation, renderProps){
