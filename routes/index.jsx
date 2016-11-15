@@ -2,12 +2,12 @@
 var router = require('express').Router()
 var React = require('react')
 var ReactDomServer = require('react-dom/server')
-var Component = require('../Component.jsx')
+var Component = require('../views/Layout.jsx')
 var ReactRouter = require('react-router')
 
 router.get('*', function(req, res){
 
-  var props = { title: 'pp' };
+  var props = { title: 'eeeeeeee' };
 
   ReactRouter.match({
     routes: require('./routes.jsx'),
@@ -19,7 +19,7 @@ router.get('*', function(req, res){
       var html = ReactDomServer.renderToString(
         <ReactRouter.RouterContext {...renderProps}
             createElement={function(Component, renderProps){
-              return <Component {...renderProps} {...props} />
+              return <Component {...renderProps} custom={props}  />
             }}
           />
 
