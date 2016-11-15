@@ -29,14 +29,15 @@ React has baked-in support for server rendering components using ReactDOMServer.
 
 # Universal app - Why?
 
-1. SEO
+1. SEO - allows search engines to crawl your pages
 2. Performance (initial load time)
 3. Cross device support
 4. Same code base (sharing of logic)
 5. Catching current trends ;)
 6. Non js users (?)
 
-In general, benefits for engineering, reusability, performance and SEO
+In general, benefits for engineering, reusability, performance and SEO<br>
+If you call ReactDOM.render() on a node that already has this server-rendered markup, React will preserve it and only attach event handlers, allowing you to have a very performant first-load experience.<br>
 
 # Universal app - How?
 
@@ -81,6 +82,9 @@ One can try and mitigate this by implementing <a href="https://medium.com/walmar
 <br> check <a href="https://github.com/walmartlabs/react-ssr-optimization">this</a>
 <br> check <a href="https://github.com/docs-code-examples-electrode-io/express-react-redux-webpack">this</a>
 
+Potentially, client code can break the server...
+When we share the code base, there is always the possibility of client code breaking the server.
+
 # General:
 
 # *
@@ -89,7 +93,8 @@ for more see: http://stackoverflow.com/questions/29824908/what-does-dehydrate-an
 <br>
 <br>
 # Some usfeul links
-
+https://ifelse.io/2015/08/28/server-side-rendering-with-react-and-react-router/<br>
+https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-4-site-is-progressively-enhanced-b5ad7cf7a447#.owkv7qc0m<br>
 http://crypt.codemancers.com/posts/2016-09-16-react-server-side-rendering/<br>
 https://medium.com/@foxhound87/server-side-rendering-with-react-router-we-must-react-ep-04-ad03b6b9e05d#.tjpc0sacq<br>
 https://medium.com/@foxhound87/state-management-hydration-with-mobx-we-must-react-ep-05-1922a72453c6#.kd04w71a9
