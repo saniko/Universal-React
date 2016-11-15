@@ -29,14 +29,15 @@ React has baked-in support for server rendering components using ReactDOMServer.
 
 # Universal app - Why?
 
-1. SEO
+1. SEO - allows search engines to crawl your pages
 2. Performance (initial load time)
 3. Cross device support
 4. Same code base (sharing of logic)
 5. Catching current trends ;)
 6. Non js users (?)
 
-In general, benefits for engineering, reusability, performance and SEO
+In general, benefits for engineering, reusability, performance and SEO<br>
+If you call ReactDOM.render() on a node that already has this server-rendered markup, React will preserve it and only attach event handlers, allowing you to have a very performant first-load experience.<br>
 
 # Universal app - How?
 
@@ -80,6 +81,9 @@ One can try and mitigate this by implementing <a href="https://medium.com/walmar
 <br>Consider this: <a href="http://www.electrode.io/docs/server_side_render_cache.html">Server Side Render Caching + Profiling</a>
 <br> check <a href="https://github.com/walmartlabs/react-ssr-optimization">this</a>
 <br> check <a href="https://github.com/docs-code-examples-electrode-io/express-react-redux-webpack">this</a>
+
+Potentially, client code can break the server...
+When we share the code base, there is always the possibility of client code breaking the server.
 
 # General:
 
