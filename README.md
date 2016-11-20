@@ -93,6 +93,9 @@ for more see: http://stackoverflow.com/questions/29824908/what-does-dehydrate-an
 <br>
 <br>
 # Some usfeul links
+code splitting:<br>
+http://brotzky.co/blog/a-beginners-step-by-step-guide-to-code-splitting-with-webpack-2-and-react-router/ <br>
+Other:<br>
 https://ifelse.io/2015/08/28/server-side-rendering-with-react-and-react-router/<br>
 https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-4-site-is-progressively-enhanced-b5ad7cf7a447#.owkv7qc0m<br>
 http://crypt.codemancers.com/posts/2016-09-16-react-server-side-rendering/<br>
