@@ -76,7 +76,7 @@ on with side effects <a href="http://slides.com/jenyaterpil/redux-from-twitter-h
 <a id="universal-app---why" class="anchor" href="#universal-app---why" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Universal app - Why?</h1>
 
 <ol>
-<li>SEO</li>
+<li>SEO - allows search engines to crawl your pages</li>
 <li>Performance (initial load time)</li>
 <li>Cross device support</li>
 <li>Same code base (sharing of logic)</li>
@@ -84,7 +84,8 @@ on with side effects <a href="http://slides.com/jenyaterpil/redux-from-twitter-h
 <li>Non js users (?)</li>
 </ol>
 
-<p>In general, benefits for engineering, reusability, performance and SEO</p>
+<p>In general, benefits for engineering, reusability, performance and SEO<br>
+If you call ReactDOM.render() on a node that already has this server-rendered markup, React will preserve it and only attach event handlers, allowing you to have a very performant first-load experience.<br></p>
 
 <h1>
 <a id="universal-app---how" class="anchor" href="#universal-app---how" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Universal app - How?</h1>
@@ -141,6 +142,9 @@ renderToString() is synchronous, the server is blocked while it runs! <br></p>
 <br> check <a href="https://github.com/walmartlabs/react-ssr-optimization">this</a>
 <br> check <a href="https://github.com/docs-code-examples-electrode-io/express-react-redux-webpack">this</a></p>
 
+<p>Potentially, client code can break the server...
+When we share the code base, there is always the possibility of client code breaking the server.</p>
+
 <h1>
 <a id="general" class="anchor" href="#general" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>General:</h1>
 
@@ -155,7 +159,12 @@ for more see: <a href="http://stackoverflow.com/questions/29824908/what-does-deh
 <h1>
 <a id="some-usfeul-links" class="anchor" href="#some-usfeul-links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Some usfeul links</h1>
 
-<p><a href="http://crypt.codemancers.com/posts/2016-09-16-react-server-side-rendering/">http://crypt.codemancers.com/posts/2016-09-16-react-server-side-rendering/</a><br>
+<p>code splitting:<br>
+<a href="http://brotzky.co/blog/a-beginners-step-by-step-guide-to-code-splitting-with-webpack-2-and-react-router/">http://brotzky.co/blog/a-beginners-step-by-step-guide-to-code-splitting-with-webpack-2-and-react-router/</a> <br>
+Other:<br>
+<a href="https://ifelse.io/2015/08/28/server-side-rendering-with-react-and-react-router/">https://ifelse.io/2015/08/28/server-side-rendering-with-react-and-react-router/</a><br>
+<a href="https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-4-site-is-progressively-enhanced-b5ad7cf7a447#.owkv7qc0m">https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-4-site-is-progressively-enhanced-b5ad7cf7a447#.owkv7qc0m</a><br>
+<a href="http://crypt.codemancers.com/posts/2016-09-16-react-server-side-rendering/">http://crypt.codemancers.com/posts/2016-09-16-react-server-side-rendering/</a><br>
 <a href="https://medium.com/@foxhound87/server-side-rendering-with-react-router-we-must-react-ep-04-ad03b6b9e05d#.tjpc0sacq">https://medium.com/@foxhound87/server-side-rendering-with-react-router-we-must-react-ep-04-ad03b6b9e05d#.tjpc0sacq</a><br>
 <a href="https://medium.com/@foxhound87/state-management-hydration-with-mobx-we-must-react-ep-05-1922a72453c6#.kd04w71a9">https://medium.com/@foxhound87/state-management-hydration-with-mobx-we-must-react-ep-05-1922a72453c6#.kd04w71a9</a>
 <a href="https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-4-site-is-progressively-enhanced-b5ad7cf7a447#.qlf149uz3">https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-4-site-is-progressively-enhanced-b5ad7cf7a447#.qlf149uz3</a></p>
