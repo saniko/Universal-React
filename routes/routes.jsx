@@ -5,6 +5,12 @@ var Route = ReactRouter.Route;
 var IndexRoute = ReactRouter.IndexRoute; // default route
 var browserHistory = ReactRouter.browserHistory;
 
+
+
+// using an ES6 transpiler, like babel
+import { BrowserRouter, Match, Link } from 'react-router'
+
+
 if (typeof window === 'object') {
     function createElement(Component, props) {
         return <Component {...props} custom={window.PROPS} />;
