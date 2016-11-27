@@ -9,6 +9,9 @@
 
 <strong>Universal state management</strong> like <strong><a href="https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md">redux</a></strong> manage changes of state both the client and the server<br>
 
+<strong>Universal mounting</strong> mounting react with server-rendered components requires us to supply the same props both on the client and server.<br>
+
+
 
 
 
@@ -17,5 +20,6 @@ UNIVERSAL STATE MANAGEMENT
 
 Good presentation:<br>
 http://loige.co/my-universal-javascript-web-applications-talk-at-codemotion-milan-2016-2/<br>
-http://slides.com/lucianomammino/universal-js-web-applications-with-react-codemotion-milan-2016#/11
+http://slides.com/lucianomammino/universal-js-web-applications-with-react-codemotion-milan-2016#/11<br>
+https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-4-site-is-progressively-enhanced-b5ad7cf7a447#.jqvf41rpu
 
