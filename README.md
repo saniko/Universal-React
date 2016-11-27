@@ -83,7 +83,8 @@ One can try and mitigate this by implementing <a href="https://medium.com/walmar
 <br> check <a href="https://github.com/docs-code-examples-electrode-io/express-react-redux-webpack">this</a>
 
 Potentially, client code can break the server...
-When we share the code base, there is always the possibility of client code breaking the server.
+When we share the code base, there is always the possibility of client code breaking the server.<br>
+Excellent talk on this topic can be found <a href="https://www.youtube.com/watch?v=PnpfGy7q96U">here</a>
 
 # General:
 
