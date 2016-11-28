@@ -3,9 +3,7 @@
 1. <strong>Universal rendering</strong> using the <strong><a href="https://facebook.github.io/react/docs/react-dom-server.html#rendertostring">renderToString()</a></strong> method which renders a component to its initial HTML<br>
 
 2. <strong>Universal routing</strong> like <strong><a href="https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md">react-router</a></strong> associating views with routes both on the client and the server<br>
-Additional options for universal routing are:<br>
-*<a href="http://router5.github.io/">router5</a>
-*<a href="https://www.kriasoft.com/universal-router/">universal-router</a>
+Additional options for universal routing are:<a href="http://router5.github.io/">router5</a> and <a href="https://www.kriasoft.com/universal-router/">universal-router</a>
 
 <strong>Universal data fetching</strong> like <strong><a href="https://github.com/Pitzcarraldo/universal-fetch">universal-fetch</a></strong> retrieving data (usually via API) through both the client and the server<br>
 
