@@ -2,8 +2,8 @@
 
 1. <strong>Universal rendering</strong> using the <strong><a href="https://facebook.github.io/react/docs/react-dom-server.html#rendertostring">renderToString()</a></strong> method which renders a component to its initial HTML<br>
 
-2. <strong>Universal routing</strong> like <strong><a href="https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md">react-router</a></strong> associating views with routes both on the client and the server<br>
-Additional options for universal routing are: <a href="http://router5.github.io/">router5</a> and <a href="https://www.kriasoft.com/universal-router/">universal-router</a>
+2. <strong>Universal routing</strong> like <strong><a href="https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md">react-router</a></strong> associating views with routes both on the client and the server. Additional options for universal routing are: <a href="http://router5.github.io/">router5</a> and <a href="https://www.kriasoft.com/universal-router/">universal-router</a>
+In the case of our components fetching asynchronous data, we need to pre-fetch that data before rendering on the server, but we cannot use the regular hooks that get fired upon render. A typical pattern is to add a static method on our top level components that deals with fetching data, and fetching the data on the server before rendering.<br>
 
 3. <strong>Universal data fetching</strong> like <strong><a href="https://github.com/Pitzcarraldo/universal-fetch">universal-fetch</a></strong> retrieving data (usually via API) through both the client and the server<br>
 Additional options for Universal data fetching: <a href="https://github.com/nodejitsu/node-http-proxy">http-proxy</a> and <a href="https://github.com/mzabriskie/axios">axios</a>
