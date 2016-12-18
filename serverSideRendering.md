@@ -14,7 +14,11 @@ Once all promises resolved we can render using renderToString().<br>
 4. <strong>Universal state management</strong> like <strong><a href="https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md">redux</a></strong> manage changes of state both the client and the server<br>
 Additional options for Universal state management: <a href="https://mobxjs.github.io/mobx/">mobx</a> and <a href="https://github.com/cerebral/cerebral">cerebral</a>
 
-5. <strong>Universal mounting</strong> mounting react with server-rendered components requires us to supply the same props both on the client and server.<br> we can do that by <a href="https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md#inject-initial-component-html-and-state">injecting the props </a>into a script tag for client retrieval.
+5. <strong>Universal mounting</strong> mounting react with server-rendered components requires us to supply the same props both on the client and server.<br> we can do that by <a href="https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md#inject-initial-component-html-and-state">injecting the props </a>into a script tag for client retrieval.<br>
+
+Additional options:<br>
+<a href="https://github.com/navgarcha/redux-thunk-saga">redux-thunk-sage</a>
+
 
 
 
