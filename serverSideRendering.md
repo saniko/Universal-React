@@ -28,3 +28,6 @@ http://loige.co/my-universal-javascript-web-applications-talk-at-codemotion-mila
 http://slides.com/lucianomammino/universal-js-web-applications-with-react-codemotion-milan-2016#/11<br>
 https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-4-site-is-progressively-enhanced-b5ad7cf7a447#.jqvf41rpu
 
+async redux:<br>
+https://medium.com/@jtbennett/asynchronous-actions-in-redux-8412cf92a26f#.fnyfwngxu<br>
+https://medium.com/@zackargyle/advanced-redux-action-types-d5a71ed44e16#.kbrkp7uwq
