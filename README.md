@@ -21,7 +21,7 @@ Building a fully featured client-side application that can be rendered on the se
 So basically we pre-render our app on the server and serve the generated html to the client.
 
 
-# Universal app - Why we need it?
+# Universal app - why we need it?
 
 1. SEO - allows search engines to crawl your pages.
 2. Performance (initial load time).
@@ -35,7 +35,8 @@ In general, benefits for **engineering**, **reusability**, **performance** and *
 # Universal app - main concepts:
 1. **Universal rendering** using the [renderToString()](https://facebook.github.io/react/docs/react-dom-server.html#rendertostring) method which renders a component to its initial HTML
 
-2. **Universal routing** like <strong><a href="https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md">react-router</a></strong> associating views with routes both on the client and the server. Additional options for universal routing are: <a href="http://router5.github.io/">router5</a> and <a href="https://www.kriasoft.com/universal-router/">universal-router</a>
+2. **Universal routing** like  [react-router](https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md) associating views with routes both on the client and the server. 
+...Additional options for universal routing are: <a href="http://router5.github.io/">router5</a> and <a href="https://www.kriasoft.com/universal-router/">universal-router</a>
 
 3. **Universal data fetching** like <strong><a href="https://github.com/Pitzcarraldo/universal-fetch">universal-fetch</a></strong> retrieving data (usually via API) through both the client and the server<br>
 Additional options for Universal data fetching: <a href="https://github.com/nodejitsu/node-http-proxy">http-proxy</a> and <a href="https://github.com/mzabriskie/axios">axios</a><br>
@@ -63,7 +64,7 @@ Additional options:<br>
 8. On the client side, a new Redux store will be created and initialized with the state provided from the server.
     Redux's only job on the server side is to provide the initial state of our app.
  
-# Universal app - Problems?
+# Universal app - problems?
 One downside of SSR is a huge performance hit on <b>complex components</b><br>
 renderToString() is synchronous, the server is blocked while it runs! <br>
 
