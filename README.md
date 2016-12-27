@@ -23,15 +23,15 @@ So basically we pre-render our app on the server and serve the generated html to
 
 # Universal app - Why we need it?
 
-1. SEO - allows search engines to crawl your pages
-2. Performance (initial load time)
-3. Cross device support
-4. Same code base (sharing of logic)
-5. Non js users
+1. SEO - allows search engines to crawl your pages.
+2. Performance (initial load time).
+3. Cross device support.
+4. Same code base (sharing of logic).
+5. Non js users.
 6. Catching current trends ;)
 
-In general, benefits for engineering, reusability, performance and SEO<br>
-If you call ReactDOM.render() on a node that already has this server-rendered markup, React will preserve it and only attach event handlers, allowing you to have a very performant first-load experience.<br>
+In general, benefits for _engineering_, _reusability_, _performance_ and _SEO_
+
 
 
 # Universal app - main players on server side:
