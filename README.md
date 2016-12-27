@@ -40,7 +40,7 @@ In general, benefits for **engineering**, **reusability**, **performance** and *
   1. [router5](http://router5.github.io/)
   2. [universal-router](https://www.kriasoft.com/universal-router/)
 
-3. **Universal data fetching** like  [universal-fetch]"https://github.com/Pitzcarraldo/universal-fetch/) retrieving data (usually via API) through both the client and the server<br>
+3. **Universal data fetching** like  [universal-fetch](https://github.com/Pitzcarraldo/universal-fetch/) retrieving data (usually via API) through both the client and the server<br>
   Additional options for Universal data fetching: 
   1. [http-proxy](https://github.com/nodejitsu/node-http-prox)
   2. [axios](https://github.com/mzabriskie/axios)
