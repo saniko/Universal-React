@@ -14,7 +14,10 @@ Part of Dani Koren's personal [blog](https://saniko.github.io/danikoren/).
 2. For React code samples click [here](https://github.com/rdig/react-code-samples)
 
 # So what is it?
-React has baked-in support for server rendering components using ReactDOMServer.renderToString(). Given a component, it will generate the HTML markup to be shipped down to the browser. React can take this markup and using ReactDOM.render() hydrate it, attach events, make it interactive and provide a fast first paint on first load.<br><br>
+To summarize this in one (long) sentence, building a fully featured client-side application that can be rendered on the server as well, and by fully featured we mean that it includes routing, async data fetching and state management.
+
+So basically we pre-render our app on the server and serve the generated html to the client.
+
 
 # Universal app - main players on server side:
 
