@@ -30,7 +30,7 @@ So basically we pre-render our app on the server and serve the generated html to
 5. Non js users.
 6. Catching current trends ;)
 
-In general, benefits for _engineering_, _reusability_, _performance_ and _SEO_
+In general, benefits for **engineering**, **reusability**, **performance** and **SEO**
 
 
 
