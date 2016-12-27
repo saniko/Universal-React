@@ -56,7 +56,7 @@ manage changes of state both the client and the server<br>
   1. [mobx](https://mobxjs.github.io/mobx/)
   2. [cerebral](https://github.com/cerebral/cerebral)
 
-5. **Universal mounting** mounting react with server-rendered components requires us to supply the same props both on the client and server.<br> we can do that by  [injecting the props(https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md#inject-initial-component-html-and-state) into a script tag for client retrieval.<br>
+5. **Universal mounting** mounting react with server-rendered components requires us to supply the same props both on the client and server.<br> we can do that by  [injecting the props](https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md#inject-initial-component-html-and-state) into a script tag for client retrieval.<br>
 
 Additional options:<br>
 <a href="https://github.com/navgarcha/redux-thunk-saga">redux-thunk-sage</a>
