@@ -35,24 +35,28 @@ In general, benefits for **engineering**, **reusability**, **performance** and *
 # Universal app - main concepts:
 1. **Universal rendering** using the [renderToString()](https://facebook.github.io/react/docs/react-dom-server.html#rendertostring) method which renders a component to its initial HTML
 
-2. **Universal routing** like  [react-router](https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md) associating views with routes both on the client and the server. 
+2. **Universal routing** like  [react-router](https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md) associating views with routes both on the client and the server.<br>
   Additional options for universal routing are: 
   1. [router5](http://router5.github.io/)
   2. [universal-router](https://www.kriasoft.com/universal-router/)
 
-
-
-3. **Universal data fetching** like **<a href="https://github.com/Pitzcarraldo/universal-fetch">universal-fetch</a>** retrieving data (usually via API) through both the client and the server<br>
-Additional options for Universal data fetching: <a href="https://github.com/nodejitsu/node-http-proxy">http-proxy</a> and <a href="https://github.com/mzabriskie/axios">axios</a><br>
+3. **Universal data fetching** like  [universal-fetch]"https://github.com/Pitzcarraldo/universal-fetch/) retrieving data (usually via API) through both the client and the server<br>
+  Additional options for Universal data fetching: 
+  1. [http-proxy](https://github.com/nodejitsu/node-http-prox)
+  2. [axios](https://github.com/mzabriskie/axios)
+  
 In the case of our components fetching asynchronous data, we need to pre-fetch that data before rendering on the server. 
 Due to renderToString synchronous nature, we cannot use the recommended componentDidMount lifecycle method for ajax call, renderToString simply won't wait for the ajax call to complete. A typical pattern is to add a static method named fetchData() on our top level components that deals with asynchronous data fetching. 
 Once react-router's match() method will match the specific route to it's designated location, we will iterate over the renderProps attribute, looking for that static fetchData() method, invoke it with a redux dispatcher, and wait for the promises to resolve.
 Once all promises resolved we can render using renderToString().<br>
 
-4. **Universal state management** like **<a href="https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md">redux</a>** manage changes of state both the client and the server<br>
-Additional options for Universal state management: <a href="https://mobxjs.github.io/mobx/">mobx</a> and <a href="https://github.com/cerebral/cerebral">cerebral</a>
+4. **Universal state management** like [redux](https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md)
+manage changes of state both the client and the server<br>
+  Additional options for Universal state management: 
+  1. [mobx](https://mobxjs.github.io/mobx/)
+  2. [cerebral](https://github.com/cerebral/cerebral)
 
-5. **Universal mounting** mounting react with server-rendered components requires us to supply the same props both on the client and server.<br> we can do that by <a href="https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md#inject-initial-component-html-and-state">injecting the props </a>into a script tag for client retrieval.<br>
+5. **Universal mounting** mounting react with server-rendered components requires us to supply the same props both on the client and server.<br> we can do that by  [injecting the props(https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md#inject-initial-component-html-and-state) into a script tag for client retrieval.<br>
 
 Additional options:<br>
 <a href="https://github.com/navgarcha/redux-thunk-saga">redux-thunk-sage</a>
