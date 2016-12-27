@@ -1,8 +1,8 @@
 # Universal-React
 **** Work In Progress *** <br><br>
-Universal/isomorphic/ssr(server-side rendering) react explained for my educational purposes with the hope it will help others as well,
-will evolve with time to full universal react app, so stay tuned.<br>
+Universal/isomorphic/ssr(server-side rendering) react explained for my educational purposes with the hope it will help others as well.<br>
 A lot has been written about this topic, you can easily find plenty of material out there, so I will try to summarize the essence of what I have learned with an emphasis on non-trivial scenarios.<br>
+will evolve with time to full universal react app, so stay tuned.<br>
 Part of Dani Koren's personal <a href="https://saniko.github.io/danikoren/">blog.</a>
 
 # Good to know
