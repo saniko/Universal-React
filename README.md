@@ -11,7 +11,7 @@ Part of Dani Koren's personal [blog](https://saniko.github.io/danikoren/).
 
 
 # Good to know
-1. For an excellent starting point to those who seek to understand the modern javascript technology stack click [here](https://github.com/saniko/js-stack-from-scratc)
+1. For an excellent starting point to those who seek to understand the modern javascript technology stack click [here](https://github.com/verekia/js-stack-from-scratch)
 2. For React code samples click [here](https://github.com/rdig/react-code-samples)
 
 # So what is it?
