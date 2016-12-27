@@ -32,7 +32,7 @@ So basically we pre-render our app on the server and serve the generated html to
 
 In general, benefits for **engineering**, **reusability**, **performance** and **SEO**
 
-# Universal app - main concepts
+# Universal app - main concepts:
 1. <strong>Universal rendering</strong> using the <strong><a href="https://facebook.github.io/react/docs/react-dom-server.html#rendertostring">renderToString()</a></strong> method which renders a component to its initial HTML<br>
 
 2. <strong>Universal routing</strong> like <strong><a href="https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md">react-router</a></strong> associating views with routes both on the client and the server. Additional options for universal routing are: <a href="http://router5.github.io/">router5</a> and <a href="https://www.kriasoft.com/universal-router/">universal-router</a>
@@ -52,8 +52,34 @@ Additional options for Universal state management: <a href="https://mobxjs.githu
 Additional options:<br>
 <a href="https://github.com/navgarcha/redux-thunk-saga">redux-thunk-sage</a>
 
+# Universal app - walkthrough:
+1. Handle the initial render when a user (or search engine crawler) first requests our app. When the server receives the request, it        renders the required component(s) into an HTML string, and then sends it as a response to the client. From that point on, the client     takes over rendering duties.
+2. Send the state of our app along in our response, so the client can use it as the initial state. if we preload any data before            generating the HTML, we want the client to also have access to this data. Otherwise, the markup generated on the client won’t match      the server markup, and the client would have to load the data again.
+3. Create a fresh, new Redux store instance on every request.On the client side, a new Redux store will be created and initialized with     the state provided from the server.
+4. Optionally dispatch some actions.
+5. Pull the state out of store.
+6. Pass the state along to the client (dehydration - extract the current state of an app and serialize it into an object * ).
+7. Package & send the HTML to the client
+8. On the client side, a new Redux store will be created and initialized with the state provided from the server.
+    Redux's only job on the server side is to provide the initial state of our app.
+ 
+ # Universal app - Problems?
+One downside of SSR is a huge performance hit on <b>complex components</b><br>
+renderToString() is synchronous, the server is blocked while it runs! <br>
+
+One can try and mitigate this by implementing <a href="https://medium.com/walmartlabs/reactjs-ssr-profiling-and-caching-5d8e9e49240c#.ucelx81s6">cache techniques</a> and <a href="https://www.youtube.com/watch?v=sn-C_DKLKPE">Component Memoization techniques</a><br>
+<br>Consider this: <a href="http://www.electrode.io/docs/server_side_render_cache.html">Server Side Render Caching + Profiling</a>
+<br> check <a href="https://github.com/walmartlabs/react-ssr-optimization">this</a>
+<br> check <a href="https://github.com/docs-code-examples-electrode-io/express-react-redux-webpack">this</a>
+
+Potentially, client code can break the server...
+When we share the code base, there is always the possibility of client code breaking the server.<br>
+Excellent talk on this topic can be found <a href="https://www.youtube.com/watch?v=PnpfGy7q96U">here</a>
 
 
+
+
+    
 # Universal app - main players on server side:
 
 1. react - using React.renderToString, enables us to render components on the server side, the component is only rendered, but not    mounted, so any methods related to mounting are not called.
@@ -91,31 +117,10 @@ On the client side, a new Redux store will be created and initialized with the s
 Redux's only job on the server side is to provide the initial state of our app.
 <br><br>
 
-## SO to recap ssr
-1. Handle the initial render when a user (or search engine crawler) first requests our app. When the server receives the request, it        renders the required component(s) into an HTML string, and then sends it as a response to the client. From that point on, the client     takes over rendering duties.
-2. Send the state of our app along in our response, so the client can use it as the initial state. if we preload any data before            generating the HTML, we want the client to also have access to this data. Otherwise, the markup generated on the client won’t match      the server markup, and the client would have to load the data again.
-3. Create a fresh, new Redux store instance on every request.On the client side, a new Redux store will be created and initialized with     the state provided from the server.
-4. Optionally dispatch some actions.
-5. Pull the state out of store.
-6. Pass the state along to the client (dehydration - extract the current state of an app and serialize it into an object * ).
-7. Package & send the HTML to the client
-8. On the client side, a new Redux store will be created and initialized with the state provided from the server.
-    Redux's only job on the server side is to provide the initial state of our app.
 
 Check server.js for detailed comments.
 
-# Universal app - Problems?
-One downside of SSR is a huge performance hit on <b>complex components</b><br>
-renderToString() is synchronous, the server is blocked while it runs! <br>
 
-One can try and mitigate this by implementing <a href="https://medium.com/walmartlabs/reactjs-ssr-profiling-and-caching-5d8e9e49240c#.ucelx81s6">cache techniques</a> and <a href="https://www.youtube.com/watch?v=sn-C_DKLKPE">Component Memoization techniques</a><br>
-<br>Consider this: <a href="http://www.electrode.io/docs/server_side_render_cache.html">Server Side Render Caching + Profiling</a>
-<br> check <a href="https://github.com/walmartlabs/react-ssr-optimization">this</a>
-<br> check <a href="https://github.com/docs-code-examples-electrode-io/express-react-redux-webpack">this</a>
-
-Potentially, client code can break the server...
-When we share the code base, there is always the possibility of client code breaking the server.<br>
-Excellent talk on this topic can be found <a href="https://www.youtube.com/watch?v=PnpfGy7q96U">here</a>
 
 # General:
 
