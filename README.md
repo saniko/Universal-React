@@ -11,9 +11,8 @@ Part of Dani Koren's personal [blog](https://saniko.github.io/danikoren/).
 
 
 # Good to know
-1. For an excellent starting point to those who seek to understand the modern javascript technology stack click <a href="https://github.com/saniko/js-stack-from-scratch">here</a>.<br>
-2. To understand the concept of reactive programming click <a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754">here</a>.<br>
-3. For React code samples click <a href="https://github.com/rdig/react-code-samples">here</a>.<br>
+1. For an excellent starting point to those who seek to understand the modern javascript technology stack click [here](https://github.com/saniko/js-stack-from-scratc)
+2. For React code samples click [here](https://github.com/rdig/react-code-samples)
 
 # So what is it?
 React has baked-in support for server rendering components using ReactDOMServer.renderToString(). Given a component, it will generate the HTML markup to be shipped down to the browser. React can take this markup and using ReactDOM.render() hydrate it, attach events, make it interactive and provide a fast first paint on first load.<br><br>
