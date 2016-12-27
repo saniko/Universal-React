@@ -3,6 +3,7 @@
 Universal/isomorphic/ssr(server-side rendering) react explained for my own educational purposes with the hope it will help others as well.
 
 A lot has been written about this topic, you can easily find plenty of material out there, so I will try to summarize the essence of what I have learned with an emphasis on non-trivial scenarios.
+
 Will evolve with time to full universal react app, so stay tuned.
 
 Part of Dani Koren's personal [blog](https://saniko.github.io/danikoren/).
@@ -15,6 +16,7 @@ Part of Dani Koren's personal [blog](https://saniko.github.io/danikoren/).
 
 # So what is it?
 To summarize this in one (long) sentence:
+
 Building a fully featured client-side application that can be rendered on the server as well, and by fully featured we mean that it includes routing, async data fetching and state management.
 
 So basically we pre-render our app on the server and serve the generated html to the client.
