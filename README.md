@@ -2,7 +2,7 @@
 **** Work In Progress *** <br><br>
 Universal/isomorphic/ssr(server-side rendering) react explained for my own educational purposes with the hope it will help others as well.
 
-A lot has been written about this topic, you can easily find plenty of material out there, so I will try to summarize the essence of what I have learned with an emphasis on non-trivial scenarios.
+A lot has been written about this topic, you can easily find plenty of material out there, so I will try to summarize the essence of what I have learned with an emphasis on non-trivial scenarios.<br>
 Will evolve with time to full universal react app, so stay tuned.
 
 Part of Dani Koren's personal [blog](https://saniko.github.io/danikoren/).
@@ -13,12 +13,25 @@ Part of Dani Koren's personal [blog](https://saniko.github.io/danikoren/).
 1. For an excellent starting point to those who seek to understand the modern javascript technology stack click [here](https://github.com/verekia/js-stack-from-scratch)
 2. For React code samples click [here](https://github.com/rdig/react-code-samples)
 
-# So what is it?
+# Universal app - what is it?
 To summarize this in one (long) sentence:
 
 Building a fully featured client-side application that can be rendered on the server as well, and by fully featured we mean that it includes routing, async data fetching and state management.
 
 So basically we pre-render our app on the server and serve the generated html to the client.
+
+
+# Universal app - Why we need it?
+
+1. SEO - allows search engines to crawl your pages
+2. Performance (initial load time)
+3. Cross device support
+4. Same code base (sharing of logic)
+5. Non js users
+6. Catching current trends ;)
+
+In general, benefits for engineering, reusability, performance and SEO<br>
+If you call ReactDOM.render() on a node that already has this server-rendered markup, React will preserve it and only attach event handlers, allowing you to have a very performant first-load experience.<br>
 
 
 # Universal app - main players on server side:
@@ -36,17 +49,6 @@ So basically we pre-render our app on the server and serve the generated html to
     3. check this out: https://tech.affirm.com/redux-patterns-and-anti-patterns-7d80ef3d53bc#.rznvukc9g
     4. good read about <a href="https://medium.com/javascript-scene/10-tips-for-better-redux-architecture-69250425af44#.c16bnn710">redux</a>
 
-# Universal app - Why?
-
-1. SEO - allows search engines to crawl your pages
-2. Performance (initial load time)
-3. Cross device support
-4. Same code base (sharing of logic)
-5. Catching current trends ;)
-6. Non js users (?)
-
-In general, benefits for engineering, reusability, performance and SEO<br>
-If you call ReactDOM.render() on a node that already has this server-rendered markup, React will preserve it and only attach event handlers, allowing you to have a very performant first-load experience.<br>
 
 # Universal app - How?
 
