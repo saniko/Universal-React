@@ -30,4 +30,5 @@ https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-4-site-is
 
 async redux:<br>
 https://medium.com/@jtbennett/asynchronous-actions-in-redux-8412cf92a26f#.fnyfwngxu<br>
-https://medium.com/@zackargyle/advanced-redux-action-types-d5a71ed44e16#.kbrkp7uwq
+https://medium.com/@zackargyle/advanced-redux-action-types-d5a71ed44e16#.kbrkp7uwq<br>
+https://hackernoon.com/asynchronous-server-side-rendering-with-react-3860c05f8a5e#.xnug4ye1m
