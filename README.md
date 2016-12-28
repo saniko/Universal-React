@@ -12,6 +12,7 @@ Part of Dani Koren's personal [blog](https://saniko.github.io/danikoren/).
 # Good to know
 1. For an excellent starting point to those who seek to understand the modern javascript technology stack click [here](https://github.com/verekia/js-stack-from-scratch)
 2. For React code samples click [here](https://github.com/rdig/react-code-samples)
+3. A nice wrap up about "Predictability and Side-effects" click [here](https://hashnode.com/post/what-are-the-benefits-of-redux-thunk-over-redux-saga-what-pros-and-cons-do-they-have-over-each-other-ciqvyydh7065w3g53ffalif61)
 
 # Universal app - what is it?
 To summarize this in one (long) sentence:
@@ -45,10 +46,10 @@ In general, benefits for **engineering**, **reusability**, **performance** and *
   1. [http-proxy](https://github.com/nodejitsu/node-http-prox)
   2. [axios](https://github.com/mzabriskie/axios)
   
-In the case of our components fetching asynchronous data, we need to pre-fetch that data before rendering on the server. 
-Due to renderToString synchronous nature, we cannot use the recommended componentDidMount lifecycle method for ajax call, renderToString simply won't wait for the ajax call to complete. A typical pattern is to add a static method named fetchData() on our top level components that deals with asynchronous data fetching. 
-Once react-router's match() method will match the specific route to it's designated location, we will iterate over the renderProps attribute, looking for that static fetchData() method, invoke it with a redux dispatcher, and wait for the promises to resolve.
-Once all promises resolved we can render using renderToString().<br>
+  In the case of our components fetching asynchronous data, we need to pre-fetch that data before rendering on the server. 
+  Due to renderToString synchronous nature, we cannot use the recommended componentDidMount lifecycle method for ajax call, renderToString simply won't wait for the ajax call to complete. A typical pattern is to add a static method named (usually) fetchData() on our top level components that deals with asynchronous data fetching. 
+  Once react-router's match() method will match the specific route to it's designated location, we will iterate over the renderProps attribute, looking for that static fetchData() method, invoke it with a redux dispatcher, and wait for the promises to resolve.
+  Once all promises resolved we can render using renderToString().<br>
 
 4. **Universal state management** like [redux](https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md)
 manage changes of state both the client and the server<br>
@@ -58,8 +59,6 @@ manage changes of state both the client and the server<br>
 
 5. **Universal mounting** mounting react with server-rendered components requires us to supply the same props both on the client and server.<br> we can do that by  [injecting the props](https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md#inject-initial-component-html-and-state) into a script tag for client retrieval.<br>
 
-Additional options:<br>
-<a href="https://github.com/navgarcha/redux-thunk-saga">redux-thunk-sage</a>
 
 # Universal app - walkthrough:
 1. Handle the initial render when a user (or search engine crawler) first requests our app. When the server receives the request, it        renders the required component(s) into an HTML string, and then sends it as a response to the client. From that point on, the client     takes over rendering duties.
@@ -84,8 +83,6 @@ One can try and mitigate this by implementing <a href="https://medium.com/walmar
 Potentially, client code can break the server...
 When we share the code base, there is always the possibility of client code breaking the server.<br>
 Excellent talk on this topic can be found <a href="https://www.youtube.com/watch?v=PnpfGy7q96U">here</a>
-
-
 
 
     
