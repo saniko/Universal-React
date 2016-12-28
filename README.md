@@ -53,8 +53,10 @@ In general, benefits for **engineering**, **reusability**, **performance** and *
   Once all promises resolved we can render using renderToString().<br>
  
   Handling advanced async actions:
+  
   There are many options to manage async actions on redux based app, it depends on the choices you make based on your app needs.
   For a nice recap read the follow:
+  
   1. [Asynchronous actions in Redux](https://medium.com/@jtbennett/asynchronous-actions-in-redux-8412cf92a26f#.3yf5mt103)
   2. [Advanced Redux Action Types](https://medium.com/@zackargyle/advanced-redux-action-types-d5a71ed44e16#.ryhc4h5up)
   
