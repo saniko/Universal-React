@@ -50,7 +50,11 @@ In general, benefits for **engineering**, **reusability**, **performance** and *
   Due to renderToString synchronous nature, we cannot use the recommended componentDidMount lifecycle method for ajax call, renderToString simply won't wait for the ajax call to complete. A typical pattern is to add a static method named (usually) fetchData() on our top level components that deals with asynchronous data fetching. 
   Once react-router's match() method will match the specific route to it's designated location, we will iterate over the renderProps attribute, looking for that static fetchData() method, invoke it with a redux dispatcher, and wait for the promises to resolve.
   Once all promises resolved we can render using renderToString().<br>
+  
+  For managing async side effects
+  [check this](http://www.npmtrends.com/redux-promise-vs-redux-saga-vs-redux-thunk-vs-redux-observable)
 
+  
 4. **Universal state management** like [redux](https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md)
 manage changes of state both the client and the server<br>
   Additional options for Universal state management: 
