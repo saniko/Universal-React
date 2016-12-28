@@ -52,11 +52,9 @@ In general, benefits for **engineering**, **reusability**, **performance** and *
   Once react-router's match() method will match the specific route to it's designated location, we will iterate over the renderProps attribute, looking for that static fetchData() method, invoke it with a redux dispatcher, and wait for the promises to resolve.
   Once all promises resolved we can render using renderToString().<br>
  
-  Handling advanced async actions:
-  
-  There are many options to manage async actions on redux based app, it depends on the choices you make based on your app needs.
-  For a nice recap read the follow:
-  
+  Handling advanced async actions:<br>
+  There are many options to manage async actions on redux based app, it depends on the choices you make based on your app needs.<br>
+  For a nice recap read the follow:<br>
   1. [Asynchronous actions in Redux](https://medium.com/@jtbennett/asynchronous-actions-in-redux-8412cf92a26f#.3yf5mt103)
   2. [Advanced Redux Action Types](https://medium.com/@zackargyle/advanced-redux-action-types-d5a71ed44e16#.ryhc4h5up)
   
