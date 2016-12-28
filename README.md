@@ -52,7 +52,11 @@ In general, benefits for **engineering**, **reusability**, **performance** and *
   Once react-router's match() method will match the specific route to it's designated location, we will iterate over the renderProps attribute, looking for that static fetchData() method, invoke it with a redux dispatcher, and wait for the promises to resolve.
   Once all promises resolved we can render using renderToString().<br>
  
-
+  Handling advanced async actions:
+  There are many options to manage async actions on redux based app, it depends on the choices you make based on your app needs.
+  For a nice recap read the follow:
+  1. [Asynchronous actions in Redux](https://medium.com/@jtbennett/asynchronous-actions-in-redux-8412cf92a26f#.3yf5mt103)
+  2. [Advanced Redux Action Types](https://medium.com/@zackargyle/advanced-redux-action-types-d5a71ed44e16#.ryhc4h5up)
   
 4. **Universal state management** like [redux](https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md)
 manage changes of state both the client and the server<br>
@@ -75,34 +79,18 @@ manage changes of state both the client and the server<br>
     Redux's only job on the server side is to provide the initial state of our app.
  
 # Universal app - problems?
-One downside of SSR is a huge performance hit on <b>complex components</b><br>
+One downside of server side rendering is a huge performance hit on __complex components__
 renderToString() is synchronous, the server is blocked while it runs! <br>
 
 One can try and mitigate this by implementing <a href="https://medium.com/walmartlabs/reactjs-ssr-profiling-and-caching-5d8e9e49240c#.ucelx81s6">cache techniques</a> and <a href="https://www.youtube.com/watch?v=sn-C_DKLKPE">Component Memoization techniques</a><br>
 <br>Consider this: <a href="http://www.electrode.io/docs/server_side_render_cache.html">Server Side Render Caching + Profiling</a>
-<br> check <a href="https://github.com/walmartlabs/react-ssr-optimization">this</a>
-<br> check <a href="https://github.com/docs-code-examples-electrode-io/express-react-redux-webpack">this</a>
+Additional read on the subject:
+[React.js server-side rendering optimization with component memoization and templatization](https://github.com/walmartlabs/react-ssr-optimizatio)
+[Electrode modules](https://github.com/docs-code-examples-electrode-io/express-react-redux-webpack)
 
-Potentially, client code can break the server...
+Additional issue is that potentially, client code can break the server...
 When we share the code base, there is always the possibility of client code breaking the server.<br>
-Excellent talk on this topic can be found <a href="https://www.youtube.com/watch?v=PnpfGy7q96U">here</a>
-
-
-    
-# Universal app - main players on server side:
-
-1. react - using React.renderToString, enables us to render components on the server side, the component is only rendered, but not    mounted, so any methods related to mounting are not called.
-2. react-router - https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md
-    1. match - to match the routes to a location without rendering.
-    2. RouterContext - for synchronous rendering of route components, Once we have a match RouterContext will render the component tree for the given router state and return the component markup as a string with the help of renderToString method.
-    3. createRoutes - to create a set of routes from our router.js file component and provide it to match.
-    4. createMemoryHistory - This is useful for when you need to customize the history object used for server-side rendering.
-3. react-redux - http://redux.js.org/docs/recipes/ServerRendering.html
-    1. very short redux diagram explanation: http://slides.com/jenyaterpil/redux-from-twitter-hype-to-production#/9, 
-       on with side effects http://slides.com/jenyaterpil/redux-from-twitter-hype-to-production#/23.
-    2. TL;DR - Redux: Redux at its most minimal is the store, actions, and reducers. Connecting React to Redux involves wrapping your     entire app in theProvider component, and then connecting components, usingmapStateToProps and mapDispatchToProps as appropriate.
-    3. check this out: https://tech.affirm.com/redux-patterns-and-anti-patterns-7d80ef3d53bc#.rznvukc9g
-    4. good read about <a href="https://medium.com/javascript-scene/10-tips-for-better-redux-architecture-69250425af44#.c16bnn710">redux</a>
+Excellent talk on this topic can be found  [here](https://www.youtube.com/watch?v=PnpfGy7q96U)
 
 
 # Universal app - How?
