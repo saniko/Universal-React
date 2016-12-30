@@ -53,15 +53,15 @@ In general, benefits for **engineering**, **reusability**, **performance** and *
   Once all promises resolved we can render using renderToString().<br>
  
  
- Handling async actions:
+ __Handling async actions__:
 
-It is very common for react components to depend on some async operation (usually to fetch data from some API), this can be a MobX action, a Redux action or any other mechanism that alters the global state.
+  It is very common for react components to depend on some async operation (usually to fetch data from some API), this can be a __MobX__ action, a __Redux__ action or any other mechanism that alters the global state.
 
-There are many options to manage async actions on the server, it depends on the global state container (e.g. Redux/Mobx/Flux), additional libraries you may choose to use (e.g. redux-saga/redux-thunk/redux-observable/etc for side effects management), and your app needs.
+  There are many options to manage async actions on the server, it depends on the global state container (e.g. __Redux__/__Mobx__/__Flux__), additional libraries you may choose to use (e.g. __redux-saga__/__redux-thunk__/__redux-observable__/etc. for side effects management), and your app needs.
 
-For a recap read the follow:
-  1. [Asynchronous actions in Redux](https://medium.com/@jtbennett/asynchronous-actions-in-redux-8412cf92a26f#.3yf5mt103)
-  2. [Advanced Redux Action Types](https://medium.com/@zackargyle/advanced-redux-action-types-d5a71ed44e16#.ryhc4h5up)
+  For a recap read the follow:
+    1. [Asynchronous actions in Redux](https://medium.com/@jtbennett/asynchronous-actions-in-redux-8412cf92a26f#.3yf5mt103)
+    2. [Advanced Redux Action Types](https://medium.com/@zackargyle/advanced-redux-action-types-d5a71ed44e16#.ryhc4h5up)
 
   
 4. **Universal state management** like [redux](https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md)
