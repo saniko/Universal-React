@@ -53,7 +53,7 @@ In general, benefits for **engineering**, **reusability**, **performance** and *
   Once all promises resolved we can render using renderToString().<br>
  
  
- __Handling async actions__:
+ *__Handling async actions__:
 
   It is very common for react components to depend on some async operation (usually to fetch data from some API), this can be a __MobX__ action, a __Redux__ action or any other mechanism that alters the global state.
 
