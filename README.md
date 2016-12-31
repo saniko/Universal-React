@@ -37,21 +37,26 @@ In general, benefits for **engineering**, **reusability**, **performance** and *
 # Universal app - main concepts:
 1. **Universal rendering** using the [renderToString()](https://facebook.github.io/react/docs/react-dom-server.html#rendertostring) method which renders a component to its initial HTML
 
-2. **Universal routing** like  [react-router](https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md) associating views with routes both on the client and the server.<br>
-  Additional options for universal routing are: 
-  1. [router5](http://router5.github.io/)
-  2. [universal-router](https://www.kriasoft.com/universal-router/)
-  3. [react-router-component](https://github.com/STRML/react-router-component)
+2. **Universal routing** 
+Associating views with routes both on the client and the server.
+We need to have the ability to render routes on the server (including components async data) before sending them on to the client.
+  Options for universal routing: 
+  1. [react-router](https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md)
+  2. [router5](http://router5.github.io/)
+  3. [universal-router](https://www.kriasoft.com/universal-router/)
+  4. [react-router-component](https://github.com/STRML/react-router-component)
   
   Additional reading:
   
   1. [universal routing options](https://auth0.com/blog/react-router-alternatives/)
   2. [compare](http://www.npmtrends.com/react-router-vs-router5-vs-universal-router-vs-react-router-component/) 
   
-3. **Universal data fetching** like  [universal-fetch](https://github.com/Pitzcarraldo/universal-fetch/) retrieving data (usually via API) through both the client and the server<br>
+3. **Universal data fetching** 
+Retrieving data (usually via API) through both the client and the server<br>
   Additional options for Universal data fetching: 
-  1. [http-proxy](https://github.com/nodejitsu/node-http-prox)
-  2. [axios](https://github.com/mzabriskie/axios)
+  1. [universal-fetch](https://github.com/Pitzcarraldo/universal-fetch/)
+  2. [http-proxy](https://github.com/nodejitsu/node-http-prox)
+  3. [axios](https://github.com/mzabriskie/axios)
  
  
  3.1 __Handling async actions__:
@@ -65,11 +70,12 @@ In general, benefits for **engineering**, **reusability**, **performance** and *
     2. [Advanced Redux Action Types](https://medium.com/@zackargyle/advanced-redux-action-types-d5a71ed44e16#.ryhc4h5up)
 
   
-4. **Universal state management** like [redux](https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md)
-manage changes of state both the client and the server<br>
+4. **Universal state management** 
+Manage changes of state both the client and the server<br>
   Additional options for Universal state management: 
-  1. [mobx](https://mobxjs.github.io/mobx/)
-  2. [cerebral](https://github.com/cerebral/cerebral)
+  1. [redux](https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md)
+  2. [mobx](https://mobxjs.github.io/mobx/)
+  3. [cerebral](https://github.com/cerebral/cerebral)
 
 5. **Universal mounting** mounting react with server-rendered components requires us to supply the same props both on the client and server.<br> we can do that by  [injecting the props](https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md#inject-initial-component-html-and-state) into a script tag for client retrieval.<br>
 
@@ -105,28 +111,6 @@ Additional read on the subject:
 Additional issue is that potentially, client code can break the server...
 When we share the code base, there is always the possibility of client code breaking the server.<br>
 Excellent talk on this topic can be found  [here](https://www.youtube.com/watch?v=PnpfGy7q96U)
-
-
-# Universal app - How?
-
-## React-Router
-We need to have the ability to render routes on the server<br>
-As opposed to the client, we need to handle 30x responses for redirects and fetching data before rendering.
-For this, we use the Router low-level API methods, match for matching routes to a location without rendering and RouterContext for sync rendering of route components.<br><br>
-for additional info:<br>
-https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md
-<br>
-## Redux
-From redux docs:<br>
-To send the data down to the client, we need to:
-
-create a fresh, new Redux store instance on every request;
-optionally dispatch some actions;
-pull the state out of store;
-and then pass the state along to the client.
-On the client side, a new Redux store will be created and initialized with the state provided from the server.
-Redux's only job on the server side is to provide the initial state of our app.
-<br><br>
 
 <br>
 # Some usfeul links
