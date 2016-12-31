@@ -42,7 +42,7 @@ In general, benefits for **engineering**, **reusability**, **performance** and *
   1. [router5](http://router5.github.io/)
   2. [universal-router](https://www.kriasoft.com/universal-router/)
   3. [react-router-component](https://github.com/STRML/react-router-component)
-  Additional reading:
+ Additional reading:
   1. [universal routing options](https://auth0.com/blog/react-router-alternatives/)
   2. [compare](http://www.npmtrends.com/react-router-vs-router5-vs-universal-router-vs-react-router-component/) 
   
