@@ -46,14 +46,9 @@ In general, benefits for **engineering**, **reusability**, **performance** and *
   Additional options for Universal data fetching: 
   1. [http-proxy](https://github.com/nodejitsu/node-http-prox)
   2. [axios](https://github.com/mzabriskie/axios)
-  
-  In the case of our components fetching asynchronous data, we need to pre-fetch that data before rendering on the server. 
-  Due to renderToString synchronous nature, we cannot use the recommended componentDidMount lifecycle method for ajax call, renderToString simply won't wait for the ajax call to complete. A typical pattern is to add a static method named (usually) fetchData() on our top level components that deals with asynchronous data fetching. 
-  Once react-router's match() method will match the specific route to it's designated location, we will iterate over the renderProps attribute, looking for that static fetchData() method, invoke it with a redux dispatcher, and wait for the promises to resolve.
-  Once all promises resolved we can render using renderToString().<br>
  
  
- *__Handling async actions__:
+ 3.1 __Handling async actions__:
 
   It is very common for react components to depend on some async operation (usually to fetch data from some API), this can be a __MobX__ action, a __Redux__ action or any other mechanism that alters the global state.
 
@@ -83,6 +78,13 @@ manage changes of state both the client and the server<br>
 7. Package & send the HTML to the client
 8. On the client side, a new Redux store will be created and initialized with the state provided from the server.
     Redux's only job on the server side is to provide the initial state of our app.
+    
+      
+  In the case of our components fetching asynchronous data, we need to pre-fetch that data before rendering on the server. 
+  Due to renderToString synchronous nature, we cannot use the recommended componentDidMount lifecycle method for ajax call, renderToString simply won't wait for the ajax call to complete. A typical pattern is to add a static method named (usually) fetchData() on our top level components that deals with asynchronous data fetching. 
+  Once react-router's match() method will match the specific route to it's designated location, we will iterate over the renderProps attribute, looking for that static fetchData() method, invoke it with a redux dispatcher, and wait for the promises to resolve.
+  Once all promises resolved we can render using renderToString().<br>
+  
  
 # Universal app - problems?
 One downside of server side rendering is a huge performance hit on __complex components__
