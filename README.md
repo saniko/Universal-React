@@ -38,7 +38,7 @@ In general, benefits for **engineering**, **reusability**, **performance** and *
 
 2. **Universal routing** - 
 Associating views with routes both on the client and the server.
-We need to have the ability to render routes on the server (including components async data) before sending them on to the client.
+We need to have the ability to render routes on the server (including components async data - see 3.1 section) before sending them on to the client.
   Options for universal routing: 
   1. [react-router](https://github.com/ReactTraining/react-router/blob/master/docs/guides/ServerRendering.md)
   2. [router5](http://router5.github.io/)
