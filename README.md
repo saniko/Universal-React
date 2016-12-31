@@ -41,7 +41,11 @@ In general, benefits for **engineering**, **reusability**, **performance** and *
   Additional options for universal routing are: 
   1. [router5](http://router5.github.io/)
   2. [universal-router](https://www.kriasoft.com/universal-router/)
-
+  3. [react-router-component](https://github.com/STRML/react-router-component)
+  Additional reading:
+  1. [universal routing options](https://auth0.com/blog/react-router-alternatives/)
+  2. [compare](http://www.npmtrends.com/react-router-vs-router5-vs-universal-router-vs-react-router-component/) 
+  
 3. **Universal data fetching** like  [universal-fetch](https://github.com/Pitzcarraldo/universal-fetch/) retrieving data (usually via API) through both the client and the server<br>
   Additional options for Universal data fetching: 
   1. [http-proxy](https://github.com/nodejitsu/node-http-prox)
