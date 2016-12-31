@@ -13,7 +13,6 @@ Part of Dani Koren's personal [blog](https://saniko.github.io/danikoren/).
 1. For an excellent starting point to those who seek to understand the modern javascript technology stack click [here](https://github.com/verekia/js-stack-from-scratch)
 2. For React code samples click [here](https://github.com/rdig/react-code-samples)
 3. A nice wrap up about "Predictability and Side-effects" click [here](https://hashnode.com/post/what-are-the-benefits-of-redux-thunk-over-redux-saga-what-pros-and-cons-do-they-have-over-each-other-ciqvyydh7065w3g53ffalif61)
-4. Managing async actions - [check this](http://www.npmtrends.com/redux-promise-vs-redux-saga-vs-redux-thunk-vs-redux-observable)
 
 # Universal app - what is it?
 To summarize this in one (long) sentence:
@@ -68,6 +67,7 @@ Retrieving data (usually via API) through both the client and the server<br>
   For a recap read the follow:
     1. [Asynchronous actions in Redux](https://medium.com/@jtbennett/asynchronous-actions-in-redux-8412cf92a26f#.3yf5mt103)
     2. [Advanced Redux Action Types](https://medium.com/@zackargyle/advanced-redux-action-types-d5a71ed44e16#.ryhc4h5up)
+    3. Managing async actions - [compare](http://www.npmtrends.com/redux-promise-vs-redux-saga-vs-redux-thunk-vs-redux-observable)
 
   
 4. **Universal state management** - 
