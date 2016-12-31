@@ -35,9 +35,9 @@ So basically we pre-render our app on the server and serve the generated html to
 In general, benefits for **engineering**, **reusability**, **performance** and **SEO**
 
 # Universal app - main concepts:
-1. **Universal rendering** using the [renderToString()](https://facebook.github.io/react/docs/react-dom-server.html#rendertostring) method which renders a component to its initial HTML
+1. **Universal rendering** - using the [renderToString()](https://facebook.github.io/react/docs/react-dom-server.html#rendertostring) method which renders a component to its initial HTML
 
-2. **Universal routing** 
+2. **Universal routing** - 
 Associating views with routes both on the client and the server.
 We need to have the ability to render routes on the server (including components async data) before sending them on to the client.
   Options for universal routing: 
@@ -51,7 +51,7 @@ We need to have the ability to render routes on the server (including components
   1. [universal routing options](https://auth0.com/blog/react-router-alternatives/)
   2. [compare](http://www.npmtrends.com/react-router-vs-router5-vs-universal-router-vs-react-router-component/) 
   
-3. **Universal data fetching** 
+3. **Universal data fetching** - 
 Retrieving data (usually via API) through both the client and the server<br>
   Additional options for Universal data fetching: 
   1. [universal-fetch](https://github.com/Pitzcarraldo/universal-fetch/)
@@ -59,7 +59,7 @@ Retrieving data (usually via API) through both the client and the server<br>
   3. [axios](https://github.com/mzabriskie/axios)
  
  
- 3.1 __Handling async actions__:
+ 3.1 __Handling async actions__: -
 
   It is very common for react components to depend on some async operation (usually to fetch data from some API), this can be a __MobX__ action, a __Redux__ action or any other mechanism that alters the global state.
 
@@ -70,14 +70,14 @@ Retrieving data (usually via API) through both the client and the server<br>
     2. [Advanced Redux Action Types](https://medium.com/@zackargyle/advanced-redux-action-types-d5a71ed44e16#.ryhc4h5up)
 
   
-4. **Universal state management** 
+4. **Universal state management** - 
 Manage changes of state both the client and the server<br>
   Additional options for Universal state management: 
   1. [redux](https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md)
   2. [mobx](https://mobxjs.github.io/mobx/)
   3. [cerebral](https://github.com/cerebral/cerebral)
 
-5. **Universal mounting** mounting react with server-rendered components requires us to supply the same props both on the client and server.<br> we can do that by  [injecting the props](https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md#inject-initial-component-html-and-state) into a script tag for client retrieval.<br>
+5. **Universal mounting**-  mounting react with server-rendered components requires us to supply the same props both on the client and server.<br> we can do that by  [injecting the props](https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md#inject-initial-component-html-and-state) into a script tag for client retrieval.<br>
 
 
 # Universal app - walkthrough:
@@ -111,21 +111,4 @@ Additional read on the subject:
 Additional issue is that potentially, client code can break the server...
 When we share the code base, there is always the possibility of client code breaking the server.<br>
 Excellent talk on this topic can be found  [here](https://www.youtube.com/watch?v=PnpfGy7q96U)
-
-<br>
-# Some usfeul links
-code splitting:<br>
-http://brotzky.co/blog/a-beginners-step-by-step-guide-to-code-splitting-with-webpack-2-and-react-router/ <br>
-Other:<br>
-https://ifelse.io/2015/08/28/server-side-rendering-with-react-and-react-router/<br>
-https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-4-site-is-progressively-enhanced-b5ad7cf7a447#.owkv7qc0m<br>
-http://crypt.codemancers.com/posts/2016-09-16-react-server-side-rendering/<br>
-https://medium.com/@foxhound87/server-side-rendering-with-react-router-we-must-react-ep-04-ad03b6b9e05d#.tjpc0sacq<br>
-https://medium.com/@foxhound87/state-management-hydration-with-mobx-we-must-react-ep-05-1922a72453c6#.kd04w71a9
-https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-4-site-is-progressively-enhanced-b5ad7cf7a447#.qlf149uz3
-
-# Going Forward 
-1. What about social login - https://hashnode.com/post/how-to-implement-social-login-in-a-universal-react-app-cityl0c1901zy8t535xj7ox24
-
-
 
