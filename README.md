@@ -99,7 +99,10 @@ Manage changes of state both the client and the server<br>
   
  
 # Universal app - problems?
-One downside of server side rendering is a huge performance hit on __complex components__
+
+Complex server side code.
+
+Huge performance hit on __complex components__
 renderToString() is synchronous, the server is blocked while it runs! <br>
 
 One can try and mitigate this by implementing <a href="https://medium.com/walmartlabs/reactjs-ssr-profiling-and-caching-5d8e9e49240c#.ucelx81s6">cache techniques</a> and <a href="https://www.youtube.com/watch?v=sn-C_DKLKPE">Component Memoization techniques</a><br>
@@ -110,5 +113,5 @@ Additional read on the subject:
 
 Additional issue is that potentially, client code can break the server...
 When we share the code base, there is always the possibility of client code breaking the server.<br>
-Excellent talk on this topic can be found  [here](https://www.youtube.com/watch?v=PnpfGy7q96U)
+
 
