@@ -80,7 +80,7 @@ Manage changes of state both the client and the server<br>
 5. **Universal mounting**-  mounting react with server-rendered components requires us to supply the same props both on the client and server.<br> we can do that by  [injecting the props](https://github.com/reactjs/redux/blob/master/docs/recipes/ServerRendering.md#inject-initial-component-html-and-state) into a script tag for client retrieval.<br>
 
 
-# Universal app - walkthrough:
+# Universal app - walkthrough (with Redux):
 1. Handle the initial render when a user (or search engine crawler) first requests our app. When the server receives the request, it        renders the required component(s) into an HTML string, and then sends it as a response to the client. From that point on, the client     takes over rendering duties.
 2. Send the state of our app along in our response, so the client can use it as the initial state. if we preload any data before            generating the HTML, we want the client to also have access to this data. Otherwise, the markup generated on the client won’t match      the server markup, and the client would have to load the data again.
 3. Create a fresh, new Redux store instance on every request.On the client side, a new Redux store will be created and initialized with     the state provided from the server.
@@ -93,9 +93,9 @@ Manage changes of state both the client and the server<br>
     
       
   In the case of our components fetching asynchronous data, we need to pre-fetch that data before rendering on the server. 
-  Due to renderToString synchronous nature, we cannot use the recommended componentDidMount lifecycle method for ajax call, renderToString simply won't wait for the ajax call to complete. A typical pattern is to add a static method named (usually) fetchData() on our top level components that deals with asynchronous data fetching. 
-  Once react-router's match() method will match the specific route to it's designated location, we will iterate over the renderProps attribute, looking for that static fetchData() method, invoke it with a redux dispatcher, and wait for the promises to resolve.
-  Once all promises resolved we can render using renderToString().<br>
+  Due to __renderToString()__ synchronous nature, we cannot use the recommended __componentDidMount__ lifecycle method for ajax call, __renderToString()__ simply won't wait for the ajax call to complete. A typical pattern is to add a static method named (usually) __fetchData()__ on our top level components that deals with asynchronous data fetching. 
+  Once react-router's __match()__ method will match the specific route to it's designated location, we will iterate over the __renderProps__ attribute, looking for that static __fetchData()__ method, invoke it with a redux dispatcher, and wait for the promises to resolve.
+  Once all promises resolved we can render __using renderToString()__.<br>
   
  
 # Universal app - problems?
@@ -103,10 +103,10 @@ Manage changes of state both the client and the server<br>
 Complex server side code.
 
 Huge performance hit on __complex components__
-renderToString() is synchronous, the server is blocked while it runs! <br>
+__renderToString()__ is synchronous, the server is blocked while it runs! <br>
 
-One can try and mitigate this by implementing <a href="https://medium.com/walmartlabs/reactjs-ssr-profiling-and-caching-5d8e9e49240c#.ucelx81s6">cache techniques</a> and <a href="https://www.youtube.com/watch?v=sn-C_DKLKPE">Component Memoization techniques</a><br>
-<br>Consider this: <a href="http://www.electrode.io/docs/server_side_render_cache.html">Server Side Render Caching + Profiling</a>
+One can try and mitigate this by implementing [cache techniques](https://medium.com/walmartlabs/reactjs-ssr-profiling-and-caching-5d8e9e49240c#.ucelx81s6l) and [Component Memoization techniques](https://www.youtube.com/watch?v=sn-C_DKLKPEl)<br>
+<br>You can also consider this: [Server Side Render Caching + Profiling](http://www.electrode.io/docs/server_side_render_cache.html)
 Additional read on the subject:
 [React.js server-side rendering optimization with component memoization and templatization](https://github.com/walmartlabs/react-ssr-optimizatio)
 [Electrode modules](https://github.com/docs-code-examples-electrode-io/express-react-redux-webpack)
