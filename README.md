@@ -122,5 +122,7 @@ When we share the code base, there is always the possibility of client code brea
 
 [Tips for Building Universal JavaScript Apps](http://www.willhastings.me/blog/tips-for-building-universal-javascript-apps)
 
+[Should I use React Server-Side Rendering?](http://andrewhfarmer.com/server-side-render/)
+
 
 
