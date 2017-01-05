@@ -100,9 +100,9 @@ Manage changes of state both the client and the server<br>
  
 # Universal app - problems?
 
-Complex server side code.
+1. Complex server side code.
 
-Huge performance hit on __complex components__
+2. Huge performance hit on __complex components__
 __renderToString()__ is synchronous, the server is blocked while it runs! <br>
 
 One can try and mitigate this by implementing [cache techniques](https://medium.com/walmartlabs/reactjs-ssr-profiling-and-caching-5d8e9e49240c#.ucelx81s6l) and [Component Memoization techniques](https://www.youtube.com/watch?v=sn-C_DKLKPEl)<br>
@@ -110,8 +110,7 @@ One can try and mitigate this by implementing [cache techniques](https://medium.
 Additional read on the subject:
 [React.js server-side rendering optimization with component memoization and templatization](https://github.com/walmartlabs/react-ssr-optimizatio)
 [Electrode modules](https://github.com/docs-code-examples-electrode-io/express-react-redux-webpack)
-
-Additional issue is that potentially, client code can break the server...
+3. Client code can break the server...
 When we share the code base, there is always the possibility of client code breaking the server.<br>
 
 
