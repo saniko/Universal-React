@@ -114,3 +114,13 @@ Additional read on the subject:
 When we share the code base, there is always the possibility of client code breaking the server.<br>
 
 
+# Resources
+[universal react router](https://medium.com/@foxhound87/server-side-rendering-with-react-router-we-must-react-ep-04-ad03b6b9e05d#.5i1s0td0f)
+
+[universal app with MobX](https://medium.com/@foxhound87/state-management-hydration-with-mobx-we-must-react-ep-05-1922a72453c6#.tvd221lhq)
+
+
+[universal app with MobX](http://www.willhastings.me/blog/tips-for-building-universal-javascript-apps)
+
+
+
