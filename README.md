@@ -134,8 +134,8 @@ Will be implemented as separate branches:
 
 3. Create MobX implementation demonstrating universal react + MobX app.
 
-4. Create Redux + async data feaching implementation demonstrating universal advanced react + Redux app.
+4. Create Redux + async data fetching implementation demonstrating advanced universal react + Redux app.
 
-5. Create MobX + async data feaching implementation demonstrating universal advanced react + MobX app.
+5. Create MobX + async data fetching implementation demonstrating advanced universal react + MobX app.
 
 
