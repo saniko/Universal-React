@@ -127,9 +127,15 @@ When we share the code base, there is always the possibility of client code brea
 
 #ToDo
 Will be implemented as separate branches:
+
 1. Create simple implementation demonstrating universal react app.
+
 2. Create Redux implementation demonstrating universal react + Redux app.
+
 3. Create MobX implementation demonstrating universal react + MobX app.
+
 4. Create Redux + async data feaching implementation demonstrating universal advanced react + Redux app.
+
 5. Create MobX + async data feaching implementation demonstrating universal advanced react + MobX app.
+
 
