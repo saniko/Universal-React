@@ -114,6 +114,11 @@ __renderToString()__ is synchronous, the server is blocked while it runs! <br>
 3. Client code can break the server...
 When we share the code base, there is always the possibility of client code breaking the server.<br>
 
+# Universal react based Frameworks 
+1. [Mern.io](http://mern.io/) 
+2. [next.js](https://zeit.co/blog/next) 
+3  [Or find a boilerplate](http://andrewhfarmer.com/starter-project/)  
+
 
 # Resources
 [Universal react router](https://medium.com/@foxhound87/server-side-rendering-with-react-router-we-must-react-ep-04-ad03b6b9e05d#.5i1s0td0f)
@@ -124,6 +129,7 @@ When we share the code base, there is always the possibility of client code brea
 [Tips for Building Universal JavaScript Apps](http://www.willhastings.me/blog/tips-for-building-universal-javascript-apps)
 
 [Should I use React Server-Side Rendering?](http://andrewhfarmer.com/server-side-render/)
+
 
 #ToDo
 Will be implemented as separate branches:
