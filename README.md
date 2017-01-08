@@ -117,7 +117,7 @@ When we share the code base, there is always the possibility of client code brea
 # Universal react based Frameworks 
 1. [Mern.io](http://mern.io/) 
 2. [next.js](https://zeit.co/blog/next) 
-3  [Or find a boilerplate](http://andrewhfarmer.com/starter-project/)  
+3. [Or find a boilerplate](http://andrewhfarmer.com/starter-project/)  
 
 
 # Resources
