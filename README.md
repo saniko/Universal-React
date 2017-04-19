@@ -122,6 +122,8 @@ When we share the code base, there is always the possibility of client code brea
 
 
 # Resources
+[Nice recap of the subject by walmart labs](https://medium.com/walmartlabs/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8
+)
 [Universal react router](https://medium.com/@foxhound87/server-side-rendering-with-react-router-we-must-react-ep-04-ad03b6b9e05d#.5i1s0td0f)
 
 [Universal app with MobX](https://medium.com/@foxhound87/state-management-hydration-with-mobx-we-must-react-ep-05-1922a72453c6#.tvd221lhq)
